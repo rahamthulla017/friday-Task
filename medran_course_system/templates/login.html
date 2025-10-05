@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<section style="display:flex; justify-content:center; padding:40px 0;">
+    <div style="width:360px; background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+        <h2 style="text-align:center; margin-bottom:20px;">Login</h2>
+        <form id="login-form-simple">
+            <div style="margin-bottom:10px;"><input id="login-username" type="text" placeholder="Username" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;"></div>
+            <div style="margin-bottom:10px;"><input id="login-password" type="password" placeholder="Password" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;"></div>
+            <button id="login-button" type="button" style="width:100%; padding:12px; background:#0069d9; color:#fff; border:none; border-radius:8px;">Log in</button>
+        </form>
+    </div>
+</section>
+
+<script>
+document.getElementById('login-button').addEventListener('click', async () => {
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+    try {
+        const res = await fetch('/api/token/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({username, password})
+        });
+        const data = await res.json();
+        if (res.ok) {
+            sessionStorage.setItem('access', data.access);
+            sessionStorage.setItem('refresh', data.refresh);
+            window.location.href = '/profile/';
+        } else {
+            alert('Login failed: ' + JSON.stringify(data));
+        }
+    } catch (err) {
+        alert('Login error: ' + err.message);
+    }
+});
+</script>
+
+{% endblock %}

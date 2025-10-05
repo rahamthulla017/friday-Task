@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" style="text-align:center; padding:80px 20px; background: linear-gradient(90deg, #4b6cb7, #182848); color:#fff; border-radius:12px; margin-bottom:40px;">
+    <h2 style="font-size:2.5rem; margin-bottom:20px;">Learn Anytime, Anywhere</h2>
+    <p style="font-size:1.2rem; margin-bottom:30px;">Join thousands of students learning online with Medran Courses.</p>
+    <a href="{% url 'courses_page' %}" class="btn-primary" style="background:#ffd700; color:#182848; padding:12px 30px; font-weight:600; border-radius:8px; text-decoration:none; transition:0.3s;">Browse Courses</a>
+</section>
+
+<!-- Features Section -->
+<section class="features" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+    <div class="feature" style="flex:1 1 250px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1); text-align:center;">
+        <h3>Expert Instructors</h3>
+        <p>Learn from industry professionals with real experience.</p>
+    </div>
+    <div class="feature" style="flex:1 1 250px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1); text-align:center;">
+        <h3>Flexible Learning</h3>
+        <p>Learn at your own pace, anytime and anywhere.</p>
+    </div>
+    <div class="feature" style="flex:1 1 250px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1); text-align:center;">
+        <h3>Certification</h3>
+        <p>Earn certificates to showcase your skills and knowledge.</p>
+    </div>
+</section>
+{% endblock %}

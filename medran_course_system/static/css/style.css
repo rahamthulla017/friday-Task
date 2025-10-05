@@ -1,0 +1,258 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4ff, #d9e8ff);
+    color: #333;
+}
+
+
+
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0d6efd, #6c63ff);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6c63ff, #0d6efd);
+    color: #fff;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+/* Courses Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.course-card {
+    background: linear-gradient(145deg, #ffffff, #e9f0ff);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.course-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #0d6efd;
+}
+
+.enroll-btn {
+    background: linear-gradient(90deg, #0d6efd, #6c63ff);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.enroll-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #6c63ff, #0d6efd);
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.features .feature {
+    background: linear-gradient(145deg, #ffffff, #e9f0ff);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.features .feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #0d6efd, #6c63ff);
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* Auth Section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.auth-card {
+    background: linear-gradient(145deg, #ffffff, #e9f0ff);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 30px;
+    color: #0d6efd;
+    font-size: 28px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #aaa;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group select:focus + label {
+    top: -8px;
+    font-size: 12px;
+    color: #0d6efd;
+}
+
+.btn-gradient {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #0d6efd, #6c63ff);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #6c63ff, #0d6efd);
+}
+
